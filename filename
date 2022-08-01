@@ -1,0 +1,6 @@
+from datetime import datetime
+
+def filename():
+    now = datetime.now()
+    today_date = str(now.year)+"."+str('%02d' % now.month)+"."+str('%02d' % now.day)
+    return today_date
