@@ -1,0 +1,10 @@
+from sklearn.linear_model import LinearRegression
+def calc_coef(df):
+    lst = list()
+    for i in np.arange(df.shape[0]):
+        x = df.iloc[i].to_numpy()
+        x = x[~np.isnan(x)].reshape(-1,1)
+        y = np.arange(1,len(x)+1)
+        reg = LinearRegression().fit(x, y)
+        lst.extend(list(reg.coef_))
+    return lst
