@@ -1,0 +1,4 @@
+def rename_columns(df,newname):
+    colnames = [colname + " " + newname for colname in list(df.columns)]
+    df.columns = colnames
+    return df
